@@ -1,15 +1,17 @@
-import './App.css'
+import './App.css';
 
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import Helmet from 'react-helmet'
+import Helmet from 'react-helmet';
+
+import SplashTitle from './components/SplashTitle'
 
 class App extends Component {
   render() {
     return (
       <div className="content">
         <Helmet title="Evan Zarowitz" />
-        <h1>Hey, I’m Evan, <br/> a developer specializing in </h1>
+        <SplashTitle />
 
 
       </div>
