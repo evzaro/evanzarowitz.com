@@ -6,7 +6,7 @@
 
   min-height: 100vh;
   padding: 0 1rem;
-  background: #f0f0f0;
+  background: #f7f7f7;
 }
 
 h1 {
@@ -20,4 +20,8 @@ h1 {
 p {
   font-family: 'Open Sans', sans-serif;
   display: inline;
+}
+
+a {
+  text-decoration: none;
 }

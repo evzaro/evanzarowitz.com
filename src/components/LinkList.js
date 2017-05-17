@@ -39,15 +39,21 @@ class LinkList extends PureComponent {
   render() {
     return (
       <ListContainer>
-        <ListItem className='icon-linkedin'>
-          <p>LinkedIn</p>
-        </ListItem>
-        <ListItem className='icon-github'>
-          <p>GitHub</p>
-        </ListItem>
-        <ListItem className='icon-envelop'>
-          <p>Email</p>
-        </ListItem>
+        <a href='https://www.linkedin.com/in/evanzarowitz/' target="_blank">
+          <ListItem className='icon-linkedin'>
+            <p>LinkedIn</p>
+          </ListItem>
+        </a>
+        <a href='https://github.com/evzaro' target="_blank">
+          <ListItem className='icon-github'>
+            <p>GitHub</p>
+          </ListItem>
+        </a>
+        <a href='mailto:evzaro@gmail.com'>
+          <ListItem className='icon-envelop'>
+            <p>evzaro@gmail.com</p>
+          </ListItem>
+        </a>
       </ListContainer>
     )
   }
