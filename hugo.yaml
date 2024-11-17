@@ -1,0 +1,13 @@
+baseURL: 'https://evanzarowitz.com/'
+languageCode: en-us
+title: Evan Zarowitz
+theme: PaperMod
+params:
+  homeInfoParams:
+    Title: Welcome 👋
+    Content: I'm a Senior Software Engineer at the [New York Times](https://open.nytimes.com/)
+  socialIcons:
+    - name: github
+      url: https://github.com/evzaro
+    - name: linkedin
+      url: https://www.linkedin.com/in/evanzarowitz/
