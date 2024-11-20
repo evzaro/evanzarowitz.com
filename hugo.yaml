@@ -2,6 +2,7 @@ baseURL: 'https://evanzarowitz.com/'
 languageCode: en-us
 title: Evan Zarowitz
 theme: PaperMod
+sectionPagesMenu: main
 params:
   homeInfoParams:
     Title: Welcome 👋

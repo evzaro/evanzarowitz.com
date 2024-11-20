@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Evan Zarowitz</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Evan Zarowitz</description>
+    <title>Musings on Evan Zarowitz</title>
+    <link>http://localhost:1313/musings/</link>
+    <description>Recent content in Musings on Evan Zarowitz</description>
     <generator>Hugo -- 0.138.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Nov 2024 15:24:30 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/musings/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My New Post</title>
       <link>http://localhost:1313/musings/my-first-post/</link>
@@ -16,13 +16,6 @@
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
 &lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!d&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Movie Game</title>
-      <link>http://localhost:1313/game/my-first-post/</link>
-      <pubDate>Sun, 17 Nov 2024 15:24:30 -0500</pubDate>
-      <guid>http://localhost:1313/game/my-first-post/</guid>
-      <description>&lt;p&gt;A portmanteau game&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
