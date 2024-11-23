@@ -1,0 +1,144 @@
+/* reset start */
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* reset end */
+
+body {
+  height: 100%;
+  background: #2d1313;
+  color: #dbdfdf;
+  font-family: "Verdana", system-ui, sans-serif;
+  display: flex;
+  line-height: 1.5;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+
+a {
+  color: #7aaed1;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #00ced1;
+}
+
+header,
+main,
+footer {
+  max-width: 35em;
+}
+
+time {
+  color: #a0abab;
+  font-size: 0.75em;
+}
+
+.summary-link {
+  display: block;
+}
+
+/* header/nav */
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 6em;
+}
+
+.nav-links {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 1rem;
+  width: 100%;
+}
+
+.back-arrow {
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.back-arrow a {
+  text-decoration: none;
+}
+
+/* footer */
+footer {
+  display: flex;
+  align-items: end;
+  height: 100%;
+  padding-bottom: 20px;
+}
+
+/* home */
+.home-links {
+  margin: 1rem 0;
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.home-section {
+  margin-bottom: 2rem;
+}
+
+.blog-list li {
+  margin-bottom: 1rem;
+}
+
+/* quotes */
+.quote-author {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+/* blog/musings */
+article {
+  font-size: 16px;
+}
+
+article p {
+  margin: 1em 0;
+}

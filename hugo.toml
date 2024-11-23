@@ -1,3 +1,46 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://evanzarowitz.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'evanzarowitz.com'
+[menus]
+    [[menus.main]]
+        identifier = "games"
+        name = "games"
+        url = "/games/"
+        weight = 4
+        [menus.main.params]
+            type = 'internal'
+    [[menus.main]]
+        identifier = "musings"
+        name = "musings"
+        url = "/musings/"
+        weight = 1
+        [menus.main.params]
+            type = 'internal'
+    [[menus.main]]
+        identifier = "quotes"
+        name = "quotes"
+        url = "/quotes/"
+        weight = 2
+        [menus.main.params]
+            type = 'internal'
+    [[menus.main]]
+        identifier = "quotes"
+        name = "quotes"
+        url = "/quotes/"
+        weight = 3
+        [menus.main.params]
+            type = 'internal'
+    [[menus.main]]
+        identifier = "linkedin"
+        name = "linkedin"
+        url = "https://www.linkedin.com/in/evanzarowitz/"
+        weight = 5
+        [menus.main.params]
+            type = 'external'
+    [[menus.main]]
+        identifier = "github"
+        name = "github"
+        url = "https://github.com/evzaro"
+        weight = 6
+        [menus.main.params]
+            type = 'external'

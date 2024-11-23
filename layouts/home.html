@@ -1,0 +1,36 @@
+{{ define "main" }}
+<main class="home">
+  <h1>Evan Zarowitz</h1>
+  <p class="home-section">
+    Software engineer at the
+    <a target="_blank" href="https://open.nytimes.com/"
+      >New&nbsp;York&nbsp;Times</a
+    >
+    - currently focused on experimentation and user messaging. Based in
+    Brooklyn, NY.
+    <br />
+    <br />
+    Some of my favorite things include the ukulele, brewing pour-overs, and
+    searching for the perfect backpack.
+  </p>
+  {{ with .Site.Menus.main }}
+
+    <ul class="home-links home-section">
+      {{ range . }} {{ if eq .Params.type "external" }}
+      <li><a target="_blank" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{ end }} {{ end }}
+    </ul>
+
+  {{ end }}
+  <!-- {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }} -->
+  <ul class="blog-list">
+  {{ range (where .Site.RegularPages "Section" "musings") }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <br>
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "Jan. 2, 2006" }}</time>
+    </li>
+    {{ end }}
+  </ul>
+</main>
+{{ end }}

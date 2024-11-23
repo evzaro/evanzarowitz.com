@@ -1,0 +1,14 @@
+<header class="nav">
+	<ul class="nav-links">
+		{{ if not .IsHome }}
+		<li class="back-arrow"><a href="/">&lt;</a></li>
+        {{ end }}
+		{{ with .Site.Menus.main }}
+		{{ range . }}
+			{{ if eq .Params.type "internal" }}
+				<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+			{{ end }}
+		{{ end }}
+		{{ end }}
+	</ul>
+</header>
