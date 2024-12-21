@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const index = dayNumber % data.length;
   todayQuiz = data[index];
 
-  document.getElementById("hint").innerHTML += todayQuiz.plot;
+  document.getElementById("hint").innerHTML += ` ${todayQuiz.plot}`;
   document.getElementById("phrase-display").textContent = buildAnswerArea(
     todayQuiz.answer
   );
