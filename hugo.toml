@@ -9,13 +9,13 @@ title = 'evanzarowitz.com'
         weight = 4
         [menus.main.params]
             type = 'internal'
-    [[menus.main]]
-        identifier = "musings"
-        name = "musings"
-        url = "/musings/"
-        weight = 1
-        [menus.main.params]
-            type = 'internal'
+    # [[menus.main]]
+        # identifier = "musings"
+        # name = "musings"
+        # url = "/musings/"
+        # weight = 1
+        # menus.main.params]
+        #    type = 'internal'
     [[menus.main]]
         identifier = "quotes"
         name = "quotes"

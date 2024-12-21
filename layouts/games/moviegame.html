@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Movie Game</title>
-	
-	
-	<link rel="stylesheet" href="/css/style.css">
-	
-</head>
-<body>
-	<header class="nav">
-	<ul class="nav-links">
-		
-		<li class="back-arrow"><a href="/">&lt;</a></li>
-        
-		
-		
-			
-				<li><a href="/quotes/">quotes</a></li>
-			
-		
-			
-				<li><a href="/games/">games</a></li>
-			
-		
-			
-		
-			
-		
-		
-	</ul>
-</header>
-
-	
+{{ define "main" }}
 <main class="main-section">
   <div class="movie-game-container">
     <h1>The Movie Title Game</h1>
@@ -46,7 +11,7 @@
       <strong>Today’s hint:</strong>
     </p>
 
-    <p id="phrase-display"></p>
+    <p id="phrase-display"><!-- make dynamic --></p>
     <input type="text" id="guess-input" placeholder="Enter your guess" />
     <button id="guess-button">Submit Guess</button>
     <p id="feedback"></p>
@@ -61,10 +26,10 @@
   const feedback = document.getElementById("feedback");
 
   document.addEventListener("DOMContentLoaded", function () {
-    
-    
-    
-    
+    // const today = new Date();
+    // const dayNumber = Math.floor(today / (1000 * 60 * 60 * 24));
+    // const index = dayNumber % data.length;
+    // todayQuiz = data[index];
     todayQuiz = data[Math.floor(Math.random() * data.length)];
     
 
@@ -234,10 +199,4 @@
     }
   }
 </style>
-
-	<footer>
-	<p>&copy; 2024 <a href="https://evanzarowitz.com/">evanzarowitz.com</a></p>
-</footer>
-
-</body>
-</html>
+{{ end }}

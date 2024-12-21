@@ -1,7 +1,7 @@
 {{ define "main" }}
-	<main>
-		{{ range (where .Site.RegularPages "Section" "quotes") }}
-
+	<main class="main-section">
+		{{ range (where .Site.RegularPages "Section" "games") }}
+			<a href="{{ .Permalink }}" class="quote-text">{{ .Title }}</a>
 		{{ end }}
 	</main>
 {{ end }}

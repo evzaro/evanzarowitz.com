@@ -1,7 +1,7 @@
 {{ define "main" }}
-	<main>
+	<main class="main-section">
 		{{ range (where .Site.RegularPages "Section" "quotes") }}
-			<p class="quote-text">{{ .Content }}</p>
+			<p class="quote-text">{{ .Params.copy }}</p>
 			<p class="quote-author">- {{ .Params.author }}</p>
 			<br>
 			<br>

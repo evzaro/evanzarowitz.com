@@ -105,6 +105,10 @@ time {
   text-decoration: none;
 }
 
+.main-section {
+  margin-top: 1.5rem;
+}
+
 /* footer */
 footer {
   display: flex;
@@ -131,7 +135,11 @@ footer {
 /* quotes */
 .quote-author {
   margin-left: 20px;
-  font-size: 16px;
+  font-size: 1rem;
+}
+
+.quote-text {
+  font-size: 1rem;
 }
 
 /* blog/musings */
