@@ -106,7 +106,7 @@ time {
 }
 
 .main-section {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 /* footer */
@@ -115,6 +115,7 @@ footer {
   align-items: end;
   height: 100%;
   padding-bottom: 20px;
+  font-size: 14px;
 }
 
 /* home */
