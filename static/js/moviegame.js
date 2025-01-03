@@ -145,6 +145,30 @@ const data = [
     answer: `The Theory of Everything Everywhere All at Once`,
   },
   {
+    plot: `In a small town setting, a frustrated man undergoes a profound change when he unexpectedly bonds with an enigmatic individual who reveals a world beyond appearances and challenges him to see life differently.`,
+    answer: `American Beauty and the Beast`,
+  },
+  {
+    plot: `In a chaotic blend of tradition and rebellion, a group of misfits navigates the complexities of honor and loyalty, challenging societal norms with their unorthodox ways.`,
+    answer: `Animal House of Flying Daggers`,
+  },
+  {
+    plot: `In a tense exploration of identity and justice, a young individual attempting to navigate life while concealing their true identity crosses paths with a pair of rebellious detectives determined to uphold the law, leading to a journey of self-discovery and unexpected alliances.`,
+    answer: `Bad Boys Don't Cry`,
+  },
+  {
+    plot: `When chaos erupts in a city as museum exhibits mysteriously come to life each night, a vigilante hero and a bumbling night guard must team up to restore order and prevent an iconic villain from seizing control of history's greatest artifacts.`,
+    answer: `The Dark Knight at the Museum`,
+  },
+  {
+    plot: `As a zombie apocalypse unfurls, a group of charismatic teachers inspires their students to seize the day and break societal norms, all while battling the undead with unorthodox defensive methods and unconventional wisdom.`,
+    answer: `Shaun of the Dead Poets Society,`,
+  },
+  {
+    plot: `No Time to Die Hard`,
+    answer: `A seasoned secret agent finds himself trapped in a skyscraper under siege, where he must team up with a resourceful NYPD officer to thwart a global terrorist threat and protect valuable secrets from falling into the wrong hands.`,
+  },
+  {
     plot: `As the line between perception and reality blurs, a woman’s mysterious disappearance intertwines with self-discovery and the battle against inner turmoil.`,
     answer: `Gone Girl Interrupted`,
   },
@@ -171,30 +195,6 @@ const data = [
   {
     plot: `In a quest across vast celestial bodies, explorers face a world transformed by intelligent beings, uncovering secrets that challenge the very notion of humanity’s place in the universe.`,
     answer: `Treasure Planet of the Apes`,
-  },
-  {
-    plot: `In a small town setting, a frustrated man undergoes a profound change when he unexpectedly bonds with an enigmatic individual who reveals a world beyond appearances and challenges him to see life differently.`,
-    answer: `American Beauty and the Beast`,
-  },
-  {
-    plot: `In a chaotic blend of tradition and rebellion, a group of misfits navigates the complexities of honor and loyalty, challenging societal norms with their unorthodox ways.`,
-    answer: `Animal House of Flying Daggers`,
-  },
-  {
-    plot: `In a tense exploration of identity and justice, a young individual attempting to navigate life while concealing their true identity crosses paths with a pair of rebellious detectives determined to uphold the law, leading to a journey of self-discovery and unexpected alliances.`,
-    answer: `Bad Boys Don't Cry`,
-  },
-  {
-    plot: `When chaos erupts in a city as museum exhibits mysteriously come to life each night, a vigilante hero and a bumbling night guard must team up to restore order and prevent an iconic villain from seizing control of history's greatest artifacts.`,
-    answer: `The Dark Knight at the Museum`,
-  },
-  {
-    plot: `As a zombie apocalypse unfurls, a group of charismatic teachers inspires their students to seize the day and break societal norms, all while battling the undead with unorthodox defensive methods and unconventional wisdom.`,
-    answer: `Shaun of the Dead Poets Society,`,
-  },
-  {
-    plot: `No Time to Die Hard`,
-    answer: `A seasoned secret agent finds himself trapped in a skyscraper under siege, where he must team up with a resourceful NYPD officer to thwart a global terrorist threat and protect valuable secrets from falling into the wrong hands.`,
   },
 ];
 
