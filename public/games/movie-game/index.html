@@ -47,9 +47,30 @@
     </p>
 
     <p id="phrase-display"></p>
-    <input type="text" id="guess-input" placeholder="Enter your guess" />
+    <input type="text" id="guess-input" placeholder="Enter your guess here!" />
     <button id="guess-button">Submit Guess</button>
     <p id="feedback"></p>
+
+    <button id="openModalBtn">?</button>
+
+    <div id="how-to-play-modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2>How to Play</h2>
+            <div class="how-to-play-text">
+              <p>Given a plot summary that merges elements from two movies, guess the fictional combined movie title, created by blending the two original movie titles, within 4 attempts. <br/>
+                The correct answer will be a <em>portmanteau</em>, i.e., the last word/words of the first title will match or sound like the first word/words of the second title. Each incorrect guess will reveal new hints.</p>
+              <ul>
+                <li>First hint: first and last letters</li>
+                <li>Second hint: first word</li>
+                <li>Third hint: last word</li>
+              </ul>
+              <p class="example-text"><strong>Example</strong></p>
+              <p><strong>Hint: </strong>A covert agency renowned for regulating extraterrestrial affairs partners with a secretive, technologically advanced kingdom to thwart an alien menace, preserving both their interconnected legacies and hidden resources.</p>
+              <p><strong>Answer: </strong>Men in Black Panther</p>
+            </div>
+        </div>
+    </div>
   </div>
 </main>
 <script src="/js/moviegame.js"></script>
@@ -62,10 +83,17 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 100%;
     font-family: "Verdana", system-ui, sans-serif;
+    position: relative;
 
     p,
-    h1 {
+    h1,
+    h2 {
       color: black;
+    }
+
+    h1 {
+      font-weight: 600;
+      margin: 0.5em 0 1em;
     }
 
     p,
@@ -74,16 +102,20 @@
       font-size: 14px;
     }
 
+    .how-to-play-text p{
+      margin: 1em 0;
+    }
+
     #guess-input {
       width: 80%;
       padding: 8px;
-      margin: 10px 0;
+      margin: 10px 0 16px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
 
     button {
-      padding: 8px 16px;
+      padding: 10px 16px;
       background-color: #007bff;
       color: white;
       border: none;
@@ -101,7 +133,7 @@
     }
 
     #feedback {
-      margin-top: 10px;
+      margin-top: 14px;
       color: red;
     }
 
@@ -110,15 +142,74 @@
     }
 
     #phrase-display {
+      font-family: monospace;
       white-space: pre-wrap;
-      margin: 2em 0;
+      margin: 1.75em 0;
       letter-spacing: 3px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    #openModalBtn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 15px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .modal {
+      display: none;  
+      position: fixed;  
+      z-index: 1;  
+      left: 0;
+      top: 0;
+      width: 100%;  
+      height: 100%;  
+      overflow: auto;  
+      background-color: rgb(0,0,0);  
+      background-color: rgba(0,0,0,0.4);  
+      text-align: left;
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;  
+        padding: 20px;
+        border: 1px solid #888;
+        width: 85%;  
+        max-width: 500px;
+    }
+
+    ul {
+      color: black;
+      font-size: 14px;
+    }
+
+    .example-text {
+      text-decoration: underline;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
     }
   }
 </style>
 
 	<footer>
-	<p>&copy; 2024 <a href="https://evanzarowitz.com/">evanzarowitz.com</a></p>
+	<p>&copy; 2025 <a href="https://evanzarowitz.com/">evanzarowitz.com</a></p>
 </footer>
 
 </body>
