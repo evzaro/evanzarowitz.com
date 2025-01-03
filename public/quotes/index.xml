@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quotes on evanzarowitz.com</title>
-    <link>http://localhost:1313/quotes/</link>
+    <link>https://evanzarowitz.com/quotes/</link>
     <description>Recent content in Quotes on evanzarowitz.com</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Nov 2024 17:59:04 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/quotes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://evanzarowitz.com/quotes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apple Pie</title>
-      <link>http://localhost:1313/quotes/apple-pie/</link>
+      <link>https://evanzarowitz.com/quotes/apple-pie/</link>
       <pubDate>Fri, 22 Nov 2024 17:59:04 -0500</pubDate>
-      <guid>http://localhost:1313/quotes/apple-pie/</guid>
+      <guid>https://evanzarowitz.com/quotes/apple-pie/</guid>
       <description></description>
     </item>
     <item>
       <title>Theory and Practice</title>
-      <link>http://localhost:1313/quotes/theory-and-practice/</link>
+      <link>https://evanzarowitz.com/quotes/theory-and-practice/</link>
       <pubDate>Fri, 22 Nov 2024 17:50:27 -0500</pubDate>
-      <guid>http://localhost:1313/quotes/theory-and-practice/</guid>
+      <guid>https://evanzarowitz.com/quotes/theory-and-practice/</guid>
       <description></description>
     </item>
   </channel>
