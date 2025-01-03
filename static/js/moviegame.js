@@ -186,7 +186,7 @@ const data = [
   },
   {
     plot: `When chaos erupts in a city as museum exhibits mysteriously come to life each night, a vigilante hero and a bumbling night guard must team up to restore order and prevent an iconic villain from seizing control of history's greatest artifacts.`,
-    answer: `The Dark Knight Night at the Museum`,
+    answer: `The Dark Knight at the Museum`,
   },
   {
     plot: `As a zombie apocalypse unfurls, a group of charismatic teachers inspires their students to seize the day and break societal norms, all while battling the undead with unorthodox defensive methods and unconventional wisdom.`,
@@ -197,3 +197,6 @@ const data = [
     answer: `A seasoned secret agent finds himself trapped in a skyscraper under siege, where he must team up with a resourceful NYPD officer to thwart a global terrorist threat and protect valuable secrets from falling into the wrong hands.`,
   },
 ];
+
+// freaky friday night lights
+// howls moving castle in the sky
