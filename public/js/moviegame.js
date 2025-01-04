@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem(localStorageKey, true);
   }
 
-  const today = new Date();
+  const today = Date.now() - new Date().getTimezoneOffset() * 60 * 1000; 
   const dayNumber = Math.floor(today / (1000 * 60 * 60 * 24));
   const index = dayNumber % data.length;
   todayQuiz = data[index];
@@ -149,38 +149,6 @@ const data = [
     answer: `American Beauty and the Beast`,
   },
   {
-    plot: `In a chaotic blend of tradition and rebellion, a group of misfits navigates the complexities of honor and loyalty, challenging societal norms with their unorthodox ways.`,
-    answer: `Animal House of Flying Daggers`,
-  },
-  {
-    plot: `In a tense exploration of identity and justice, a young individual attempting to navigate life while concealing their true identity crosses paths with a pair of rebellious detectives determined to uphold the law, leading to a journey of self-discovery and unexpected alliances.`,
-    answer: `Bad Boys Don't Cry`,
-  },
-  {
-    plot: `When chaos erupts in a city as museum exhibits mysteriously come to life each night, a vigilante hero and a bumbling night guard must team up to restore order and prevent an iconic villain from seizing control of history's greatest artifacts.`,
-    answer: `The Dark Knight at the Museum`,
-  },
-  {
-    plot: `As a zombie apocalypse unfurls, a group of charismatic teachers inspires their students to seize the day and break societal norms, all while battling the undead with unorthodox defensive methods and unconventional wisdom.`,
-    answer: `Shaun of the Dead Poets Society,`,
-  },
-  {
-    plot: `No Time to Die Hard`,
-    answer: `A seasoned secret agent finds himself trapped in a skyscraper under siege, where he must team up with a resourceful NYPD officer to thwart a global terrorist threat and protect valuable secrets from falling into the wrong hands.`,
-  },
-  {
-    plot: `As the line between perception and reality blurs, a woman’s mysterious disappearance intertwines with self-discovery and the battle against inner turmoil.`,
-    answer: `Gone Girl Interrupted`,
-  },
-  {
-    plot: `A figure of immense strength finds unexpected alliance and support amidst a community bound by resilience and compassion, discovering the true essence of invulnerability and human connection.`,
-    answer: `Man of Steel Magnolias`,
-  },
-  {
-    plot: `In a tale of transformation and redemption, a steadfast creature and a misunderstood figure forge a deep bond through shared adventures, revealing the true essence of resilience in the face of adversity.`,
-    answer: `Black Beauty and the Beast`,
-  },
-  {
     plot: `Amidst a desolate and treacherous landscape, a relentless pursuit drives individuals towards redemption and retribution, balancing chaos with a search for personal salvation.`,
     answer: `Mad Max Fury Road to Perdition`,
   },
@@ -193,10 +161,43 @@ const data = [
     answer: `There Will Be Blood Diamond`,
   },
   {
+    plot: `In a tale of transformation and redemption, a steadfast creature and a misunderstood figure forge a deep bond through shared adventures, revealing the true essence of resilience in the face of adversity.`,
+    answer: `Black Beauty and the Beast`,
+  },
+  {
+    plot: `As a zombie apocalypse unfurls, a group of charismatic teachers inspires their students to seize the day and break societal norms, all while battling the undead with unorthodox defensive methods and unconventional wisdom.`,
+    answer: `Shaun of the Dead Poets Society`,
+  },
+  {
+    plot: `In an unexpected convergence of campus life and ancient martial arts intrigue, a group of unruly misfits inadvertently becomes involved with a mysterious clan, leading them on a journey filled with hidden alliances, humor, and unexpected heroism as they face a looming threat to their world.`,
+    answer: `Animal House of Flying Daggers`,
+  },
+  {
+    plot: `During a pivotal season of high school football, an unexpected body swap thrusts a mother and daughter into each other's roles, compelling them to tackle new challenges.`,
+    answer: `Freaky Friday Night Lights`,
+  },
+  {
+    plot: `In a tense exploration of identity and justice, a young individual attempting to navigate life while concealing their true identity crosses paths with a pair of rebellious detectives determined to uphold the law, leading to a journey of self-discovery and unexpected alliances.`,
+    answer: `Bad Boys Don't Cry`,
+  },
+  {
+    plot: `When chaos erupts in a city as museum exhibits mysteriously come to life each night, a vigilante hero and a bumbling night guard must team up to restore order and prevent an iconic villain from seizing control of history's greatest artifacts.`,
+    answer: `The Dark Knight at the Museum`,
+  },
+  {
+    plot: `A seasoned secret agent finds himself trapped in a skyscraper under siege, where he must team up with a resourceful NYPD officer to thwart a global terrorist threat and protect valuable secrets from falling into the wrong hands.`,
+    answer: `No Time to Die Hard`,
+  },
+  {
+    plot: `As the line between perception and reality blurs, a woman’s mysterious disappearance intertwines with self-discovery and the battle against inner turmoil.`,
+    answer: `Gone Girl Interrupted`,
+  },
+  {
     plot: `In a quest across vast celestial bodies, explorers face a world transformed by intelligent beings, uncovering secrets that challenge the very notion of humanity’s place in the universe.`,
     answer: `Treasure Planet of the Apes`,
   },
+  {
+    plot: `A figure of immense strength finds unexpected alliance and support amidst a community bound by resilience and compassion, discovering the true essence of invulnerability and human connection.`,
+    answer: `Man of Steel Magnolias`,
+  },
 ];
-
-// freaky friday night lights
-// howls moving castle in the sky
