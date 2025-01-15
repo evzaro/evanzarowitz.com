@@ -1,11 +1,15 @@
 const maxGuesses = 4;
 let currentGuess = 0;
+
+const maxHints = 3;
+let currentHint = 0;
+
 let todayQuiz = {};
 let quizDone = false;
 const phraseDisplay = document.getElementById("phrase-display");
 const feedback = document.getElementById("feedback");
 
-const localStorageKey = 'hasSeenModal';
+const localStorageKey = "hasSeenModal";
 
 // starting logic
 document.addEventListener("DOMContentLoaded", function () {
@@ -15,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem(localStorageKey, true);
   }
 
-  const today = Date.now() - new Date().getTimezoneOffset() * 60 * 1000; 
+  const today = Date.now() - new Date().getTimezoneOffset() * 60 * 1000;
   const dayNumber = Math.floor(today / (1000 * 60 * 60 * 24));
   const index = dayNumber % data.length;
   todayQuiz = data[index];
@@ -36,6 +40,11 @@ document
     }
   });
 
+document.getElementById("hint-button").addEventListener("click", () => {
+  currentHint++;
+  revealHint();
+});
+
 function handleGuess(event) {
   const userGuess = document.getElementById("guess-input").value.toLowerCase();
 
@@ -48,12 +57,13 @@ function handleGuess(event) {
     disableInputs();
   } else {
     currentGuess++;
-    revealPortion();
     if (currentGuess < maxGuesses) {
+      checkGuess(userGuess);
       feedback.textContent = `Incorrect guess! You have ${
         maxGuesses - currentGuess
       } guesses left.`;
     } else {
+      document.getElementById("phrase-display").textContent = todayQuiz.answer;
       quizDone = true;
       disableInputs();
       feedback.textContent = `You've lost! The title was: "${todayQuiz.answer}". Try again tomorrow!`;
@@ -79,11 +89,32 @@ const buildAnswerArea = (phrase) => {
 const disableInputs = () => {
   document.getElementById("guess-button").disabled = true;
   document.getElementById("guess-input").disabled = true;
+  document.getElementById("hint-button").disabled = true;
   document.getElementById("guess-input").placeholder = "Game Over!";
 };
 
-function revealPortion() {
-  if (currentGuess === 1) {
+// check guess logic
+function checkGuess(guess) {
+  if (guess) {
+    let phraseArray = document
+      .getElementById("phrase-display")
+      .textContent.split("");
+    let answerArray = todayQuiz.answer.split("");
+
+    for (let i = 0; i < answerArray.length; i++) {
+      if (guess[i] && guess[i].toLowerCase() === answerArray[i].toLowerCase()) {
+        phraseArray[i] = answerArray[i];
+      }
+    }
+
+    document.getElementById("phrase-display").textContent =
+      phraseArray.join("");
+  }
+}
+
+// hints reveal logic
+function revealHint() {
+  if (currentHint === 1) {
     let phraseArray = document
       .getElementById("phrase-display")
       .textContent.split("");
@@ -92,7 +123,7 @@ function revealPortion() {
       todayQuiz.answer[todayQuiz.answer.length - 1];
     document.getElementById("phrase-display").textContent =
       phraseArray.join("");
-  } else if (currentGuess === 2) {
+  } else if (currentHint === 2) {
     let phraseArray = document
       .getElementById("phrase-display")
       .textContent.split(" ");
@@ -100,7 +131,7 @@ function revealPortion() {
     phraseArray[0] = answerArray[0];
     document.getElementById("phrase-display").textContent =
       phraseArray.join(" ");
-  } else if (currentGuess === 3) {
+  } else if (currentHint === 3) {
     let phraseArray = document
       .getElementById("phrase-display")
       .textContent.split(" ");
@@ -108,8 +139,9 @@ function revealPortion() {
     phraseArray[phraseArray.length - 1] = answerArray[answerArray.length - 1];
     document.getElementById("phrase-display").textContent =
       phraseArray.join(" ");
-  } else if (currentGuess === maxGuesses) {
-    document.getElementById("phrase-display").textContent = todayQuiz.answer;
+    document.getElementById("hint-button").disabled = true;
+  } else {
+    document.getElementById("hint-button").disabled = true;
   }
 }
 
@@ -199,5 +231,9 @@ const data = [
   {
     plot: `A figure of immense strength finds unexpected alliance and support amidst a community bound by resilience and compassion, discovering the true essence of invulnerability and human connection.`,
     answer: `Man of Steel Magnolias`,
+  },
+  {
+    plot: `When two musicians fleeing from a Chicago crime syndicate disguise themselves and join a band in a seemingly tranquil English village, they inadvertently become entangled with a top London cop uncovering a sinister conspiracy beneath the village's peaceful façade, leading to unexpected comedic and action-packed adventures.`,
+    answer: `Some Like it Hot Fuzz`,
   },
 ];
